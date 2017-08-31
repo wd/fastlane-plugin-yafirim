@@ -141,7 +141,6 @@ module Fastlane
                                        short_option: "-p",
                                        optional: true,
                                        description: "Path to your apk file",
-                                       default_value: "./app/build/outputs/apk/",
                                        verify_block: proc do |value|
                                          UI.user_error!("Directory '#{value}' not exists.") unless Dir.exist?(value)
                                        end,
