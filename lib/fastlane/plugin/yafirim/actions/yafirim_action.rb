@@ -238,7 +238,7 @@ module Fastlane
 
       def find_version(options)
         return if options[:version]
-        out = `grep ' versionName "' app/build.gradle | awk -F '"' '{print $2}'`
+        out = `grep version ../package.json  | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]'`
         options[:version] = out.chomp
       end
 
