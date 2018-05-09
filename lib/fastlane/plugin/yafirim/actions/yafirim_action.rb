@@ -80,7 +80,7 @@ module Fastlane
         firim_client = Faraday.new(nil,
                                    {
                                      request: {
-                                       timeout:       1000,
+                                       timeout:       3000,
                                        open_timeout:  300
                                      }
                                    }
